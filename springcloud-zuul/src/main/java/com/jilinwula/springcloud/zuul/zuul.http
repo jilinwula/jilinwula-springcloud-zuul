@@ -1,0 +1,11 @@
+GET http://127.0.0.1:8081/springcloud-api/api/get
+
+###
+
+GET http://127.0.0.1:8081/openapi/api/get
+
+###
+
+GET http://127.0.0.1:8081/openapi/api/get?token=jilinwula
+
+###
