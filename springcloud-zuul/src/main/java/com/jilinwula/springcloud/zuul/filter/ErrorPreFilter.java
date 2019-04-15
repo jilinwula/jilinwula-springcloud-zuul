@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import javax.servlet.http.HttpServletResponse;
 
 @Component
-public class ErrorFilter extends ZuulFilter {
+public class ErrorPreFilter extends ZuulFilter {
     @Override
     public String filterType() {
         return FilterConstants.ERROR_TYPE;
@@ -17,7 +17,7 @@ public class ErrorFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return FilterConstants.SEND_ERROR_FILTER_ORDER - 1;
+        return FilterConstants.SEND_ERROR_FILTER_ORDER -1 ;
     }
 
     @Override
@@ -29,6 +29,7 @@ public class ErrorFilter extends ZuulFilter {
     public Object run() throws ZuulException {
         RequestContext requestContext = RequestContext.getCurrentContext();
         requestContext.setResponseBody("系统异常");
+        requestContext.set("sendErrorFilter.ran", true);
         return null;
     }
 }
