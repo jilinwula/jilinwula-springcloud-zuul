@@ -13,6 +13,7 @@
     <modules>
         <module>springcloud-eureka</module>
         <module>springcloud-api</module>
+        <module>springcloud-zuul</module>
     </modules>
 
 

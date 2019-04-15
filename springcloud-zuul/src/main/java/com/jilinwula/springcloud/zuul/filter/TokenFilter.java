@@ -36,6 +36,7 @@ public class TokenFilter extends ZuulFilter {
         if (StringUtils.isEmpty(token) || !"jilinwula".equals(token)) {
             requestContext.setSendZuulResponse(false);
             requestContext.setResponseStatusCode(HttpStatus.UNAUTHORIZED.value());
+            System.out.println(1/0);
         }
         return null;
     }

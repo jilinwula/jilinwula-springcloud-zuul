@@ -17,7 +17,6 @@ public class ApiController {
         map.put("code", 0);
         map.put("msg", "success");
         map.put("data", "吉林乌拉");
-        System.out.println(1 / 0);
         return map;
     }
 }

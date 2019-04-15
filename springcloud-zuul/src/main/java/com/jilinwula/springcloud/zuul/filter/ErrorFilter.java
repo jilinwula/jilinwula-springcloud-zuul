@@ -17,7 +17,7 @@ public class ErrorFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return FilterConstants.SEND_ERROR_FILTER_ORDER;
+        return FilterConstants.SEND_ERROR_FILTER_ORDER - 1;
     }
 
     @Override
